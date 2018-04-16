@@ -1,0 +1,1366 @@
+### FART  16 APR 18 
+#
+
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ workon opencv_venv
+/home/dhankar/anaconda2/bin/python: No module named virtualenvwrapper
+/home/dhankar/anaconda2/bin/python: No module named virtualenvwrapper
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 15, 2018 - 12:33:01
+Django version 1.11, using settings 'info2.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku login
+Enter your Heroku credentials:
+Email: dhankar.rohit@gmail.com
+Password: ************
+Logged in as dhankar.rohit@gmail.com
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku apps:info -a django-rest-api-comp-vision
+=== django-rest-api-comp-vision
+Addons:         heroku-postgresql:hobby-dev
+Auto Cert Mgmt: false
+Dynos:          web: 1
+Git URL:        https://git.heroku.com/django-rest-api-comp-vision.git
+Owner:          dhankar.rohit@gmail.com
+Region:         us
+Repo Size:      991 KB
+Slug Size:      63 MB
+Stack:          heroku-16
+Web URL:        https://django-rest-api-comp-vision.herokuapp.com/
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ python
+Python 3.5.2 (default, Aug 18 2017, 17:48:00) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ ## Added to Own -- requirements.txt 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ ## opencv-python==3.4 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku login
+Enter your Heroku credentials:
+Email: dhankar.rohit@gmail.com
+Password: ************
+Logged in as dhankar.rohit@gmail.com
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "opencv-python 3.4"
+[master b6efd9c] opencv-python 3.4
+ 1 file changed, 1 insertion(+)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.16 KiB | 0 bytes/s, done.
+Total 10 (delta 6), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.4
+remote: -----> Installing pip
+remote: -----> Installing requirements with pip
+remote:        Collecting bokeh==0.12.13 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 1))
+remote:          Downloading bokeh-0.12.13.tar.gz (15.4MB)
+remote:        Collecting certifi==2017.11.5 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 2))
+remote:          Downloading certifi-2017.11.5-py2.py3-none-any.whl (330kB)
+remote:        Collecting chardet==3.0.4 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 3))
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 4))
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl
+remote:        Collecting dj-static==0.0.6 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 5))
+remote:          Downloading dj-static-0.0.6.tar.gz
+remote:        Collecting Django==1.11 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 6))
+remote:          Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)
+remote:        Collecting django-crispy-forms==1.7.0 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 7))
+remote:          Downloading django_crispy_forms-1.7.0-py2.py3-none-any.whl (104kB)
+remote:        Collecting django-toolbelt==0.0.1 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 8))
+remote:          Downloading django-toolbelt-0.0.1.tar.gz
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 9))
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)
+remote:        Collecting gunicorn==19.7.1 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 10))
+remote:          Downloading gunicorn-19.7.1-py2.py3-none-any.whl (111kB)
+remote:        Collecting idna==2.6 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 11))
+remote:          Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+remote:        Collecting Jinja2==2.10 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 12))
+remote:          Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
+remote:        Collecting lml==0.0.1 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 13))
+remote:          Downloading lml-0.0.1-py2.py3-none-any.whl
+remote:        Collecting MarkupSafe==1.0 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 14))
+remote:          Downloading MarkupSafe-1.0.tar.gz
+remote:        Collecting numpy==1.13.3 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 15))
+remote:          Downloading numpy-1.13.3-cp36-cp36m-manylinux1_x86_64.whl (17.0MB)
+remote:        Collecting opencv-python==3.4 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 16))
+remote:          Could not find a version that satisfies the requirement opencv-python==3.4 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 16)) (from versions: 3.1.0.4, 3.1.0.5, 3.2.0.6, 3.2.0.7, 3.2.0.8, 3.3.0.9, 3.3.0.10, 3.3.1.11, 3.4.0.12)
+remote:        No matching distribution found for opencv-python==3.4 (from -r /tmp/build_ab224845ea738a16ee1b2c0129e4281c/requirements.txt (line 16))
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "opencv-python 3.4"
+[master 16b4952] opencv-python 3.4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.40 KiB | 0 bytes/s, done.
+Total 13 (delta 8), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.4
+remote: -----> Installing pip
+remote: -----> Installing requirements with pip
+remote:        Collecting bokeh==0.12.13 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 1))
+remote:          Downloading bokeh-0.12.13.tar.gz (15.4MB)
+remote:        Collecting certifi==2017.11.5 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 2))
+remote:          Downloading certifi-2017.11.5-py2.py3-none-any.whl (330kB)
+remote:        Collecting chardet==3.0.4 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 3))
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 4))
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl
+remote:        Collecting dj-static==0.0.6 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 5))
+remote:          Downloading dj-static-0.0.6.tar.gz
+remote:        Collecting Django==1.11 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 6))
+remote:          Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)
+remote:        Collecting django-crispy-forms==1.7.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 7))
+remote:          Downloading django_crispy_forms-1.7.0-py2.py3-none-any.whl (104kB)
+remote:        Collecting django-toolbelt==0.0.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 8))
+remote:          Downloading django-toolbelt-0.0.1.tar.gz
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 9))
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)
+remote:        Collecting gunicorn==19.7.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 10))
+remote:          Downloading gunicorn-19.7.1-py2.py3-none-any.whl (111kB)
+remote:        Collecting idna==2.6 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 11))
+remote:          Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+remote:        Collecting Jinja2==2.10 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 12))
+remote:          Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
+remote:        Collecting lml==0.0.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 13))
+remote:          Downloading lml-0.0.1-py2.py3-none-any.whl
+remote:        Collecting MarkupSafe==1.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 14))
+remote:          Downloading MarkupSafe-1.0.tar.gz
+remote:        Collecting numpy==1.13.3 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 15))
+remote:          Downloading numpy-1.13.3-cp36-cp36m-manylinux1_x86_64.whl (17.0MB)
+remote:        Collecting opencv-python==3.4.0.12 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 16))
+remote:          Downloading opencv_python-3.4.0.12-cp36-cp36m-manylinux1_x86_64.whl (24.9MB)
+remote:        Collecting pandas==0.21.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 17))
+remote:          Downloading pandas-0.21.0-cp36-cp36m-manylinux1_x86_64.whl (26.2MB)
+remote:        Collecting Pillow==4.3.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 18))
+remote:          Downloading Pillow-4.3.0-cp36-cp36m-manylinux1_x86_64.whl (5.8MB)
+remote:        Collecting psycopg2==2.7.3.2 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 19))
+remote:          Downloading psycopg2-2.7.3.2-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+remote:        Collecting pyexcel==0.5.6 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 20))
+remote:          Downloading pyexcel-0.5.6-py2.py3-none-any.whl (122kB)
+remote:        Collecting pyexcel-io==0.5.4 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 21))
+remote:          Downloading pyexcel_io-0.5.4-py2.py3-none-any.whl (41kB)
+remote:        Collecting pyexcel-webio==0.1.4 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 22))
+remote:          Downloading pyexcel_webio-0.1.4-py2.py3-none-any.whl
+remote:        Collecting pyexcel-xls==0.5.4 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 23))
+remote:          Downloading pyexcel_xls-0.5.4-py2.py3-none-any.whl
+remote:        Collecting python-dateutil==2.6.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 24))
+remote:          Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+remote:        Collecting pytz==2017.3 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 25))
+remote:          Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
+remote:        Collecting PyYAML==3.12 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 26))
+remote:          Downloading PyYAML-3.12.tar.gz (253kB)
+remote:        Collecting requests==2.18.4 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 27))
+remote:          Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+remote:        Collecting six==1.11.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 28))
+remote:          Downloading six-1.11.0-py2.py3-none-any.whl
+remote:        Collecting static3==0.7.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 29))
+remote:          Downloading static3-0.7.0.tar.gz
+remote:        Collecting texttable==1.1.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 30))
+remote:          Downloading texttable-1.1.1.tar.gz
+remote:        Collecting tornado==4.5.2 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 31))
+remote:          Downloading tornado-4.5.2.tar.gz (483kB)
+remote:        Collecting urllib3==1.22 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 32))
+remote:          Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+remote:        Collecting whitenoise==3.3.1 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 33))
+remote:          Downloading whitenoise-3.3.1-py2.py3-none-any.whl
+remote:        Collecting xlrd==1.1.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 34))
+remote:          Downloading xlrd-1.1.0-py2.py3-none-any.whl (108kB)
+remote:        Collecting xlwt==1.3.0 (from -r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 35))
+remote:          Downloading xlwt-1.3.0-py2.py3-none-any.whl (99kB)
+remote:        Collecting olefile (from Pillow==4.3.0->-r /tmp/build_49a1438c96c9841fad930d062deb247e/requirements.txt (line 18))
+remote:          Downloading olefile-0.45.1.zip (112kB)
+remote:        Installing collected packages: six, PyYAML, python-dateutil, MarkupSafe, Jinja2, numpy, tornado, bokeh, certifi, chardet, dj-database-url, static3, dj-static, pytz, Django, django-crispy-forms, psycopg2, gunicorn, django-toolbelt, djangorestframework, idna, lml, opencv-python, pandas, olefile, Pillow, texttable, pyexcel-io, pyexcel, pyexcel-webio, xlrd, xlwt, pyexcel-xls, urllib3, requests, whitenoise
+remote:          Running setup.py install for PyYAML: started
+remote:            Running setup.py install for PyYAML: finished with status 'done'
+remote:          Running setup.py install for MarkupSafe: started
+remote:            Running setup.py install for MarkupSafe: finished with status 'done'
+remote:          Running setup.py install for tornado: started
+remote:            Running setup.py install for tornado: finished with status 'done'
+remote:          Running setup.py install for bokeh: started
+remote:            Running setup.py install for bokeh: finished with status 'done'
+remote:          Running setup.py install for static3: started
+remote:            Running setup.py install for static3: finished with status 'done'
+remote:          Running setup.py install for dj-static: started
+remote:            Running setup.py install for dj-static: finished with status 'done'
+remote:          Running setup.py install for django-toolbelt: started
+remote:            Running setup.py install for django-toolbelt: finished with status 'done'
+remote:          Running setup.py install for olefile: started
+remote:            Running setup.py install for olefile: finished with status 'done'
+remote:          Running setup.py install for texttable: started
+remote:            Running setup.py install for texttable: finished with status 'done'
+remote:        Successfully installed Django-1.11 Jinja2-2.10 MarkupSafe-1.0 Pillow-4.3.0 PyYAML-3.12 bokeh-0.12.13 certifi-2017.11.5 chardet-3.0.4 dj-database-url-0.4.2 dj-static-0.0.6 django-crispy-forms-1.7.0 django-toolbelt-0.0.1 djangorestframework-3.7.3 gunicorn-19.7.1 idna-2.6 lml-0.0.1 numpy-1.13.3 olefile-0.45.1 opencv-python-3.4.0.12 pandas-0.21.0 psycopg2-2.7.3.2 pyexcel-0.5.6 pyexcel-io-0.5.4 pyexcel-webio-0.1.4 pyexcel-xls-0.5.4 python-dateutil-2.6.1 pytz-2017.3 requests-2.18.4 six-1.11.0 static3-0.7.0 texttable-1.1.1 tornado-4.5.2 urllib3-1.22 whitenoise-3.3.1 xlrd-1.1.0 xlwt-1.3.0
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        Traceback (most recent call last):
+remote:          File "manage.py", line 22, in <module>
+remote:            execute_from_command_line(sys.argv)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 363, in execute_from_command_line
+remote:            utility.execute()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 337, in execute
+remote:            django.setup()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+remote:            apps.populate(settings.INSTALLED_APPS)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+remote:            app_config.import_models()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+remote:            self.models_module = import_module(models_module_name)
+remote:          File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+remote:            return _bootstrap._gcd_import(name[level:], package, level)
+remote:          File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+remote:          File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+remote:          File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+remote:          File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+remote:          File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+remote:          File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+remote:          File "/tmp/build_49a1438c96c9841fad930d062deb247e/indexapp/models.py", line 9, in <module>
+remote:            from .image_processing import *
+remote:          File "/tmp/build_49a1438c96c9841fad930d062deb247e/indexapp/image_processing.py", line 8, in <module>
+remote:            import scipy
+remote:        ModuleNotFoundError: No module named 'scipy'
+remote: 
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote: 
+remote:        You may need to update application code to resolve this error.
+remote:        Or, you can disable collectstatic for this application:
+remote: 
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote: 
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "opencv-python 3.4"
+[master 2d0046b] opencv-python 3.4
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (17/17), 1.76 KiB | 0 bytes/s, done.
+Total 17 (delta 11), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.4
+remote: -----> Installing pip
+remote: -----> Installing requirements with pip
+remote:        Collecting bokeh==0.12.13 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 1))
+remote:          Downloading bokeh-0.12.13.tar.gz (15.4MB)
+remote:        Collecting certifi==2017.11.5 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 2))
+remote:          Downloading certifi-2017.11.5-py2.py3-none-any.whl (330kB)
+remote:        Collecting chardet==3.0.4 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 3))
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 4))
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl
+remote:        Collecting dj-static==0.0.6 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 5))
+remote:          Downloading dj-static-0.0.6.tar.gz
+remote:        Collecting Django==1.11 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 6))
+remote:          Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)
+remote:        Collecting django-crispy-forms==1.7.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 7))
+remote:          Downloading django_crispy_forms-1.7.0-py2.py3-none-any.whl (104kB)
+remote:        Collecting django-toolbelt==0.0.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 8))
+remote:          Downloading django-toolbelt-0.0.1.tar.gz
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 9))
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)
+remote:        Collecting gunicorn==19.7.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 10))
+remote:          Downloading gunicorn-19.7.1-py2.py3-none-any.whl (111kB)
+remote:        Collecting idna==2.6 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 11))
+remote:          Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+remote:        Collecting Jinja2==2.10 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 12))
+remote:          Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
+remote:        Collecting lml==0.0.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 13))
+remote:          Downloading lml-0.0.1-py2.py3-none-any.whl
+remote:        Collecting MarkupSafe==1.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 14))
+remote:          Downloading MarkupSafe-1.0.tar.gz
+remote:        Collecting numpy==1.13.3 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 15))
+remote:          Downloading numpy-1.13.3-cp36-cp36m-manylinux1_x86_64.whl (17.0MB)
+remote:        Collecting opencv-python==3.4.0.12 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 16))
+remote:          Downloading opencv_python-3.4.0.12-cp36-cp36m-manylinux1_x86_64.whl (24.9MB)
+remote:        Collecting pandas==0.21.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 17))
+remote:          Downloading pandas-0.21.0-cp36-cp36m-manylinux1_x86_64.whl (26.2MB)
+remote:        Collecting Pillow==4.3.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 18))
+remote:          Downloading Pillow-4.3.0-cp36-cp36m-manylinux1_x86_64.whl (5.8MB)
+remote:        Collecting psycopg2==2.7.3.2 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 19))
+remote:          Downloading psycopg2-2.7.3.2-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+remote:        Collecting pyexcel==0.5.6 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 20))
+remote:          Downloading pyexcel-0.5.6-py2.py3-none-any.whl (122kB)
+remote:        Collecting pyexcel-io==0.5.4 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 21))
+remote:          Downloading pyexcel_io-0.5.4-py2.py3-none-any.whl (41kB)
+remote:        Collecting pyexcel-webio==0.1.4 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 22))
+remote:          Downloading pyexcel_webio-0.1.4-py2.py3-none-any.whl
+remote:        Collecting pyexcel-xls==0.5.4 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 23))
+remote:          Downloading pyexcel_xls-0.5.4-py2.py3-none-any.whl
+remote:        Collecting python-dateutil==2.6.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 24))
+remote:          Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+remote:        Collecting pytz==2017.3 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 25))
+remote:          Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
+remote:        Collecting PyYAML==3.12 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 26))
+remote:          Downloading PyYAML-3.12.tar.gz (253kB)
+remote:        Collecting requests==2.18.4 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 27))
+remote:          Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+remote:        Collecting six==1.11.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 28))
+remote:          Downloading six-1.11.0-py2.py3-none-any.whl
+remote:        Collecting static3==0.7.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 29))
+remote:          Downloading static3-0.7.0.tar.gz
+remote:        Collecting texttable==1.1.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 30))
+remote:          Downloading texttable-1.1.1.tar.gz
+remote:        Collecting tornado==4.5.2 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 31))
+remote:          Downloading tornado-4.5.2.tar.gz (483kB)
+remote:        Collecting urllib3==1.22 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 32))
+remote:          Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+remote:        Collecting whitenoise==3.3.1 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 33))
+remote:          Downloading whitenoise-3.3.1-py2.py3-none-any.whl
+remote:        Collecting xlrd==1.1.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 34))
+remote:          Downloading xlrd-1.1.0-py2.py3-none-any.whl (108kB)
+remote:        Collecting xlwt==1.3.0 (from -r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 35))
+remote:          Downloading xlwt-1.3.0-py2.py3-none-any.whl (99kB)
+remote:        Collecting olefile (from Pillow==4.3.0->-r /tmp/build_e26f2dba854b930a5769ffcacbb8c600/requirements.txt (line 18))
+remote:          Downloading olefile-0.45.1.zip (112kB)
+remote:        Installing collected packages: six, PyYAML, python-dateutil, MarkupSafe, Jinja2, numpy, tornado, bokeh, certifi, chardet, dj-database-url, static3, dj-static, pytz, Django, django-crispy-forms, psycopg2, gunicorn, django-toolbelt, djangorestframework, idna, lml, opencv-python, pandas, olefile, Pillow, texttable, pyexcel-io, pyexcel, pyexcel-webio, xlwt, xlrd, pyexcel-xls, urllib3, requests, whitenoise
+remote:          Running setup.py install for PyYAML: started
+remote:            Running setup.py install for PyYAML: finished with status 'done'
+remote:          Running setup.py install for MarkupSafe: started
+remote:            Running setup.py install for MarkupSafe: finished with status 'done'
+remote:          Running setup.py install for tornado: started
+remote:            Running setup.py install for tornado: finished with status 'done'
+remote:          Running setup.py install for bokeh: started
+remote:            Running setup.py install for bokeh: finished with status 'done'
+remote:          Running setup.py install for static3: started
+remote:            Running setup.py install for static3: finished with status 'done'
+remote:          Running setup.py install for dj-static: started
+remote:            Running setup.py install for dj-static: finished with status 'done'
+remote:          Running setup.py install for django-toolbelt: started
+remote:            Running setup.py install for django-toolbelt: finished with status 'done'
+remote:          Running setup.py install for olefile: started
+remote:            Running setup.py install for olefile: finished with status 'done'
+remote:          Running setup.py install for texttable: started
+remote:            Running setup.py install for texttable: finished with status 'done'
+remote:        Successfully installed Django-1.11 Jinja2-2.10 MarkupSafe-1.0 Pillow-4.3.0 PyYAML-3.12 bokeh-0.12.13 certifi-2017.11.5 chardet-3.0.4 dj-database-url-0.4.2 dj-static-0.0.6 django-crispy-forms-1.7.0 django-toolbelt-0.0.1 djangorestframework-3.7.3 gunicorn-19.7.1 idna-2.6 lml-0.0.1 numpy-1.13.3 olefile-0.45.1 opencv-python-3.4.0.12 pandas-0.21.0 psycopg2-2.7.3.2 pyexcel-0.5.6 pyexcel-io-0.5.4 pyexcel-webio-0.1.4 pyexcel-xls-0.5.4 python-dateutil-2.6.1 pytz-2017.3 requests-2.18.4 six-1.11.0 static3-0.7.0 texttable-1.1.1 tornado-4.5.2 urllib3-1.22 whitenoise-3.3.1 xlrd-1.1.0 xlwt-1.3.0
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        139 static files copied to '/tmp/static_in_env/static_root', 189 post-processed.
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 136.7M
+remote: -----> Launching...
+remote:        Released v12
+remote:        https://django-rest-api-comp-vision.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/django-rest-api-comp-vision.git
+   909f927..2d0046b  master -> master
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku open
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku logs -t
+2018-04-15T14:51:10.050017+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2018-04-15T14:51:10.050019+00:00 app[web.1]:   File "/app/indexapp/models.py", line 9, in <module>
+2018-04-15T14:51:10.050020+00:00 app[web.1]:     from .image_processing import *
+2018-04-15T14:51:10.050022+00:00 app[web.1]:   File "/app/indexapp/image_processing.py", line 7, in <module>
+2018-04-15T14:51:10.050026+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/cv2/__init__.py", line 4, in <module>
+2018-04-15T14:51:10.050024+00:00 app[web.1]:     import cv2
+2018-04-15T14:51:10.050027+00:00 app[web.1]:     from .cv2 import *
+2018-04-15T14:51:10.050070+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2018-04-15T14:51:10.050670+00:00 app[web.1]: [2018-04-15 14:51:10 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-04-15T14:51:10.266464+00:00 app[web.1]: [2018-04-15 14:51:10 +0000] [4] [INFO] Shutting down: Master
+2018-04-15T14:51:10.266609+00:00 app[web.1]: [2018-04-15 14:51:10 +0000] [4] [INFO] Reason: Worker failed to boot.
+2018-04-15T14:51:10.362494+00:00 heroku[web.1]: Process exited with status 3
+2018-04-15T14:51:10.392575+00:00 heroku[web.1]: State changed from up to crashed
+2018-04-15T14:51:10.395451+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T14:51:20.942315+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T14:51:23.348421+00:00 app[web.1]: [2018-04-15 14:51:23 +0000] [4] [INFO] Starting gunicorn 19.7.1
+2018-04-15T14:51:23.348966+00:00 app[web.1]: [2018-04-15 14:51:23 +0000] [4] [INFO] Listening at: http://0.0.0.0:14668 (4)
+2018-04-15T14:51:23.349108+00:00 app[web.1]: [2018-04-15 14:51:23 +0000] [4] [INFO] Using worker: sync
+2018-04-15T14:51:23.353187+00:00 app[web.1]: [2018-04-15 14:51:23 +0000] [8] [INFO] Booting worker with pid: 8
+2018-04-15T14:51:23.383642+00:00 app[web.1]: [2018-04-15 14:51:23 +0000] [9] [INFO] Booting worker with pid: 9
+2018-04-15T14:51:24.252831+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [9] [ERROR] Exception in worker process
+2018-04-15T14:51:24.252877+00:00 app[web.1]: Traceback (most recent call last):
+2018-04-15T14:51:24.252879+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-04-15T14:51:24.252881+00:00 app[web.1]:     worker.init_process()
+2018-04-15T14:51:24.252883+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-04-15T14:51:24.252885+00:00 app[web.1]:     self.load_wsgi()
+2018-04-15T14:51:24.252887+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-04-15T14:51:24.252888+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-04-15T14:51:24.252890+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-04-15T14:51:24.252892+00:00 app[web.1]:     self.callable = self.load()
+2018-04-15T14:51:24.252894+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-04-15T14:51:24.252895+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-04-15T14:51:24.252897+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-04-15T14:51:24.252898+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-04-15T14:51:24.252900+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-04-15T14:51:24.252902+00:00 app[web.1]:     __import__(module)
+2018-04-15T14:51:24.252903+00:00 app[web.1]:   File "/app/info2/wsgi.py", line 17, in <module>
+2018-04-15T14:51:24.252905+00:00 app[web.1]:     application = get_wsgi_application()
+2018-04-15T14:51:24.252907+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+2018-04-15T14:51:24.252908+00:00 app[web.1]:     django.setup(set_prefix=False)
+2018-04-15T14:51:24.252910+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+2018-04-15T14:51:24.252911+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2018-04-15T14:51:24.252913+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+2018-04-15T14:51:24.252914+00:00 app[web.1]:     app_config.import_models()
+2018-04-15T14:51:24.252916+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+2018-04-15T14:51:24.252917+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2018-04-15T14:51:24.252919+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2018-04-15T14:51:24.252921+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2018-04-15T14:51:24.252922+00:00 app[web.1]:   File "/app/indexapp/models.py", line 9, in <module>
+2018-04-15T14:51:24.252924+00:00 app[web.1]:     from .image_processing import *
+2018-04-15T14:51:24.252925+00:00 app[web.1]:   File "/app/indexapp/image_processing.py", line 7, in <module>
+2018-04-15T14:51:24.252927+00:00 app[web.1]:     import cv2
+2018-04-15T14:51:24.252929+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/cv2/__init__.py", line 4, in <module>
+2018-04-15T14:51:24.252931+00:00 app[web.1]:     from .cv2 import *
+2018-04-15T14:51:24.252971+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2018-04-15T14:51:24.253527+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-04-15T14:51:24.284936+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [8] [ERROR] Exception in worker process
+2018-04-15T14:51:24.284940+00:00 app[web.1]: Traceback (most recent call last):
+2018-04-15T14:51:24.284942+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-04-15T14:51:24.284944+00:00 app[web.1]:     worker.init_process()
+2018-04-15T14:51:24.284946+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-04-15T14:51:24.284947+00:00 app[web.1]:     self.load_wsgi()
+2018-04-15T14:51:24.284949+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-04-15T14:51:24.284950+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-04-15T14:51:24.284952+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-04-15T14:51:24.284954+00:00 app[web.1]:     self.callable = self.load()
+2018-04-15T14:51:24.284955+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-04-15T14:51:24.284957+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-04-15T14:51:24.284958+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-04-15T14:51:24.284960+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-04-15T14:51:24.284961+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-04-15T14:51:24.284963+00:00 app[web.1]:     __import__(module)
+2018-04-15T14:51:24.284965+00:00 app[web.1]:   File "/app/info2/wsgi.py", line 17, in <module>
+2018-04-15T14:51:24.284966+00:00 app[web.1]:     application = get_wsgi_application()
+2018-04-15T14:51:24.284968+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+2018-04-15T14:51:24.284969+00:00 app[web.1]:     django.setup(set_prefix=False)
+2018-04-15T14:51:24.284971+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+2018-04-15T14:51:24.284972+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2018-04-15T14:51:24.284974+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+2018-04-15T14:51:24.284976+00:00 app[web.1]:     app_config.import_models()
+2018-04-15T14:51:24.284977+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+2018-04-15T14:51:24.284979+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2018-04-15T14:51:24.284980+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2018-04-15T14:51:24.284982+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2018-04-15T14:51:24.284983+00:00 app[web.1]:   File "/app/indexapp/models.py", line 9, in <module>
+2018-04-15T14:51:24.284985+00:00 app[web.1]:     from .image_processing import *
+2018-04-15T14:51:24.284986+00:00 app[web.1]:   File "/app/indexapp/image_processing.py", line 7, in <module>
+2018-04-15T14:51:24.284988+00:00 app[web.1]:     import cv2
+2018-04-15T14:51:24.284989+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/cv2/__init__.py", line 4, in <module>
+2018-04-15T14:51:24.284991+00:00 app[web.1]:     from .cv2 import *
+2018-04-15T14:51:24.284998+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2018-04-15T14:51:24.285367+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-04-15T14:51:24.449189+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [4] [INFO] Shutting down: Master
+2018-04-15T14:51:24.449348+00:00 app[web.1]: [2018-04-15 14:51:24 +0000] [4] [INFO] Reason: Worker failed to boot.
+2018-04-15T14:51:24.521137+00:00 heroku[web.1]: Process exited with status 3
+2018-04-15T14:51:24.607453+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T14:51:35.257978+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=1d90eb96-e0b1-4e0e-a505-c78ed58cdcc2 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T14:51:36.221712+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=c9bf7f7d-5f5d-4ccf-a330-ec1bba1645e8 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T14:51:48.247959+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/admin/" host=django-rest-api-comp-vision.herokuapp.com request_id=54ae066f-5f7f-4dce-bcbf-7389b2041812 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T14:51:48.892102+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=4f6669b1-12e0-4f5a-8cde-0e48496e5b15 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T15:24:37.424682+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T15:24:47.436535+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T15:24:49.327016+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [4] [INFO] Starting gunicorn 19.7.1
+2018-04-15T15:24:49.327514+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [4] [INFO] Listening at: http://0.0.0.0:11606 (4)
+2018-04-15T15:24:49.327570+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [4] [INFO] Using worker: sync
+2018-04-15T15:24:49.331746+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [8] [INFO] Booting worker with pid: 8
+2018-04-15T15:24:49.349928+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [9] [INFO] Booting worker with pid: 9
+2018-04-15T15:24:49.712283+00:00 heroku[web.1]: State changed from starting to up
+2018-04-15T15:24:49.833908+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [8] [ERROR] Exception in worker process
+2018-04-15T15:24:49.833929+00:00 app[web.1]: Traceback (most recent call last):
+2018-04-15T15:24:49.833937+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-04-15T15:24:49.833939+00:00 app[web.1]:     worker.init_process()
+2018-04-15T15:24:49.833941+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-04-15T15:24:49.833942+00:00 app[web.1]:     self.load_wsgi()
+2018-04-15T15:24:49.833944+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-04-15T15:24:49.833946+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-04-15T15:24:49.833948+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-04-15T15:24:49.833950+00:00 app[web.1]:     self.callable = self.load()
+2018-04-15T15:24:49.833951+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-04-15T15:24:49.833953+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-04-15T15:24:49.833954+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-04-15T15:24:49.833956+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-04-15T15:24:49.833958+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-04-15T15:24:49.833959+00:00 app[web.1]:     __import__(module)
+2018-04-15T15:24:49.833961+00:00 app[web.1]:   File "/app/info2/wsgi.py", line 17, in <module>
+2018-04-15T15:24:49.833963+00:00 app[web.1]:     application = get_wsgi_application()
+2018-04-15T15:24:49.833964+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+2018-04-15T15:24:49.833966+00:00 app[web.1]:     django.setup(set_prefix=False)
+2018-04-15T15:24:49.833967+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+2018-04-15T15:24:49.833969+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2018-04-15T15:24:49.833970+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+2018-04-15T15:24:49.833972+00:00 app[web.1]:     app_config.import_models()
+2018-04-15T15:24:49.833974+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+2018-04-15T15:24:49.833975+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2018-04-15T15:24:49.833977+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2018-04-15T15:24:49.833979+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2018-04-15T15:24:49.833980+00:00 app[web.1]:   File "/app/indexapp/models.py", line 9, in <module>
+2018-04-15T15:24:49.833982+00:00 app[web.1]:     from .image_processing import *
+2018-04-15T15:24:49.833983+00:00 app[web.1]:   File "/app/indexapp/image_processing.py", line 7, in <module>
+2018-04-15T15:24:49.833985+00:00 app[web.1]:     import cv2
+2018-04-15T15:24:49.833987+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/cv2/__init__.py", line 4, in <module>
+2018-04-15T15:24:49.833988+00:00 app[web.1]:     from .cv2 import *
+2018-04-15T15:24:49.834053+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2018-04-15T15:24:49.834790+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [8] [INFO] Worker exiting (pid: 8)
+2018-04-15T15:24:49.879324+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [9] [ERROR] Exception in worker process
+2018-04-15T15:24:49.879328+00:00 app[web.1]: Traceback (most recent call last):
+2018-04-15T15:24:49.879330+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+2018-04-15T15:24:49.879332+00:00 app[web.1]:     worker.init_process()
+2018-04-15T15:24:49.879334+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 126, in init_process
+2018-04-15T15:24:49.879336+00:00 app[web.1]:     self.load_wsgi()
+2018-04-15T15:24:49.879337+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+2018-04-15T15:24:49.879339+00:00 app[web.1]:     self.wsgi = self.app.wsgi()
+2018-04-15T15:24:49.879341+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+2018-04-15T15:24:49.879343+00:00 app[web.1]:     self.callable = self.load()
+2018-04-15T15:24:49.879345+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+2018-04-15T15:24:49.879346+00:00 app[web.1]:     return self.load_wsgiapp()
+2018-04-15T15:24:49.879348+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+2018-04-15T15:24:49.879350+00:00 app[web.1]:     return util.import_app(self.app_uri)
+2018-04-15T15:24:49.879351+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/gunicorn/util.py", line 352, in import_app
+2018-04-15T15:24:49.879353+00:00 app[web.1]:     __import__(module)
+2018-04-15T15:24:49.879355+00:00 app[web.1]:   File "/app/info2/wsgi.py", line 17, in <module>
+2018-04-15T15:24:49.879356+00:00 app[web.1]:     application = get_wsgi_application()
+2018-04-15T15:24:49.879358+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/core/wsgi.py", line 13, in get_wsgi_application
+2018-04-15T15:24:49.879360+00:00 app[web.1]:     django.setup(set_prefix=False)
+2018-04-15T15:24:49.879361+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+2018-04-15T15:24:49.879363+00:00 app[web.1]:     apps.populate(settings.INSTALLED_APPS)
+2018-04-15T15:24:49.879365+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+2018-04-15T15:24:49.879366+00:00 app[web.1]:     app_config.import_models()
+2018-04-15T15:24:49.879368+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+2018-04-15T15:24:49.879370+00:00 app[web.1]:     self.models_module = import_module(models_module_name)
+2018-04-15T15:24:49.879372+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+2018-04-15T15:24:49.879373+00:00 app[web.1]:     return _bootstrap._gcd_import(name[level:], package, level)
+2018-04-15T15:24:49.879375+00:00 app[web.1]:   File "/app/indexapp/models.py", line 9, in <module>
+2018-04-15T15:24:49.879376+00:00 app[web.1]:     from .image_processing import *
+2018-04-15T15:24:49.879378+00:00 app[web.1]:   File "/app/indexapp/image_processing.py", line 7, in <module>
+2018-04-15T15:24:49.879380+00:00 app[web.1]:     import cv2
+2018-04-15T15:24:49.879382+00:00 app[web.1]:   File "/app/.heroku/python/lib/python3.6/site-packages/cv2/__init__.py", line 4, in <module>
+2018-04-15T15:24:49.879383+00:00 app[web.1]:     from .cv2 import *
+2018-04-15T15:24:49.879390+00:00 app[web.1]: ImportError: libSM.so.6: cannot open shared object file: No such file or directory
+2018-04-15T15:24:49.879921+00:00 app[web.1]: [2018-04-15 15:24:49 +0000] [9] [INFO] Worker exiting (pid: 9)
+2018-04-15T15:24:50.041680+00:00 app[web.1]: [2018-04-15 15:24:50 +0000] [4] [INFO] Shutting down: Master
+2018-04-15T15:24:50.041795+00:00 app[web.1]: [2018-04-15 15:24:50 +0000] [4] [INFO] Reason: Worker failed to boot.
+2018-04-15T15:24:50.107888+00:00 heroku[web.1]: Process exited with status 3
+2018-04-15T15:24:50.127040+00:00 heroku[web.1]: State changed from up to crashed
+^[[1;5F^C(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku buildpacks
+=== django-rest-api-comp-vision Buildpack URL
+heroku/python
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku apps:info -a django-rest-api-comp-vision
+=== django-rest-api-comp-vision
+Addons:         heroku-postgresql:hobby-dev
+Auto Cert Mgmt: false
+Dynos:          web: 1
+Git URL:        https://git.heroku.com/django-rest-api-comp-vision.git
+Owner:          dhankar.rohit@gmail.com
+Region:         us
+Repo Size:      996 KB
+Slug Size:      137 MB
+Stack:          heroku-16
+Web URL:        https://django-rest-api-comp-vision.herokuapp.com/
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku apps:info -a django-rest-api-comp-vision
+=== django-rest-api-comp-vision
+Addons:         heroku-postgresql:hobby-dev
+Auto Cert Mgmt: false
+Dynos:          web: 1
+Git URL:        https://git.heroku.com/django-rest-api-comp-vision.git
+Owner:          dhankar.rohit@gmail.com
+Region:         us
+Repo Size:      996 KB
+Slug Size:      137 MB
+Stack:          heroku-16
+Web URL:        https://django-rest-api-comp-vision.herokuapp.com/
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku stack:set container
+Stack set. Next release on ⬢ django-rest-api-comp-vision will use container.
+Run git push heroku master to create a new release on ⬢ django-rest-api-comp-vision.
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku apps:info -a django-rest-api-comp-vision
+=== django-rest-api-comp-vision
+Addons:         heroku-postgresql:hobby-dev
+Auto Cert Mgmt: false
+Dynos:          web: 1
+Git URL:        https://git.heroku.com/django-rest-api-comp-vision.git
+Owner:          dhankar.rohit@gmail.com
+Region:         us
+Repo Size:      996 KB
+Slug Size:      137 MB
+Stack:          heroku-16
+Web URL:        https://django-rest-api-comp-vision.herokuapp.com/
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "stack==Container"
+On branch master
+nothing to commit, working directory clean
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Everything up-to-date
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "stack==Container"
+[master 589e9f6] stack==Container
+ 1 file changed, 2 insertions(+)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 416 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: === Fetching app code failed
+remote: =!= Your app does not include a heroku.yml build manifest. To deploy your app, either create a heroku.yml: https://devcenter.heroku.com/articles/heroku-yml-build-manifest
+remote: Or change your stack by running: 'heroku stack:set heroku-16'
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "stack==Container"
+[master 78fbd2d] stack==Container
+ 1 file changed, 8 insertions(+)
+ create mode 100644 heroku.yml
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 749 bytes | 0 bytes/s, done.
+Total 7 (delta 3), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: === Fetching app code.. failed
+remote: =!= Your heroku.yml isn't valid YAML.
+remote: Try validating your YAML and fixing the errors: http://www.yamllint.com/
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "stack==Container"
+[master 1575bcb] stack==Container
+ 1 file changed, 6 insertions(+), 8 deletions(-)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1021 bytes | 0 bytes/s, done.
+Total 10 (delta 4), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: === Fetching app code
+remote: =!= Your heroku.yml does not specify a 'run' or 'docker' section, which is required.
+remote: For more information, check out https://devcenter.heroku.com/articles/heroku-yml-build-manifest#defining-the-process-to-run
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ ##https://devcenter.heroku.com/articles/heroku-yml-build-manifest#defining-the-process-to-run
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+
+
+
+
+
+## FART ---15 APR 18 
+#
+
+dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ workon opencv_venv
+/home/dhankar/anaconda2/bin/python: No module named virtualenvwrapper
+/home/dhankar/anaconda2/bin/python: No module named virtualenvwrapper
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ python manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 15, 2018 - 06:22:09
+Django version 1.11, using settings 'info2.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+^C(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku login
+Enter your Heroku credentials:
+Email: dhankar.rohit@gmail.com
+Password: ************
+Logged in as dhankar.rohit@gmail.com
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku plugins:install heroku-repo
+Installing heroku-repo@latest... done
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku repo:purge_cache -a django-rest-api-comp-vision
+Running set -e
+mkdir -p tmp/repo_tmp/unpack
+cd tmp/repo_tmp
+curl -o repo-cache.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=2IN3e87NgoDAssQSrIMy98twssU%3D&Expires=1523777163'
+cd unpack
+tar -zxf ../repo-cache.tgz
+METADATA="vendor/heroku"
+if [ -d "$METADATA" ]; then
+  TMPDIR=`mktemp -d`
+  cp -rf $METADATA $TMPDIR
+fi
+cd ..
+rm -rf unpack
+mkdir unpack
+cd unpack
+TMPDATA="$TMPDIR/heroku"
+VENDOR="vendor"
+if [ -d "$TMPDATA" ]; then
+  mkdir $VENDOR
+  cp -rf $TMPDATA $VENDOR
+  rm -rf $TMPDIR
+fi
+tar -zcf ../cache-repack.tgz .
+curl -o /dev/null --upload-file ../cache-repack.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=IGy6dvr4VdbNTaiOa4toIvfLdMw%3D&Expires=1523777217'
+exit on ⬢ django-rest-api-comp-vision... up, run.9595
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  112M  100  112M    0     0  41.0M      0  0:00:02  0:00:02 --:--:-- 41.0M
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   114    0     0  100   114      0    846 --:--:-- --:--:-- --:--:--   844
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "cv2"
+[master 909f927] cv2
+ 4 files changed, 6 insertions(+), 2 deletions(-)
+ rewrite indexapp/__pycache__/image_processing.cpython-35.pyc (77%)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 2.65 KiB | 0 bytes/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing python-3.6.4
+remote: -----> Installing pip
+remote: -----> Installing requirements with pip
+remote:        Collecting bokeh==0.12.13 (from -r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading bokeh-0.12.13.tar.gz (15.4MB)
+remote:        Collecting six>=1.5.2 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading six-1.11.0-py2.py3-none-any.whl
+remote:        Collecting PyYAML>=3.10 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading PyYAML-3.12.tar.gz (253kB)
+remote:        Collecting python-dateutil>=2.1 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading python_dateutil-2.7.2-py2.py3-none-any.whl (212kB)
+remote:        Collecting Jinja2>=2.7 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
+remote:        Collecting numpy>=1.7.1 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading numpy-1.14.2-cp36-cp36m-manylinux1_x86_64.whl (12.2MB)
+remote:        Collecting tornado>=4.3 (from bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading tornado-5.0.2.tar.gz (506kB)
+remote:        Collecting MarkupSafe>=0.23 (from Jinja2>=2.7->bokeh==0.12.13->-r /tmp/build_130e57a7870296687f8879b88a4592fa/requirements.txt (line 1))
+remote:          Downloading MarkupSafe-1.0.tar.gz
+remote:        Installing collected packages: six, PyYAML, python-dateutil, MarkupSafe, Jinja2, numpy, tornado, bokeh
+remote:          Running setup.py install for PyYAML: started
+remote:            Running setup.py install for PyYAML: finished with status 'done'
+remote:          Running setup.py install for MarkupSafe: started
+remote:            Running setup.py install for MarkupSafe: finished with status 'done'
+remote:          Running setup.py install for tornado: started
+remote:            Running setup.py install for tornado: finished with status 'done'
+remote:          Running setup.py install for bokeh: started
+remote:            Running setup.py install for bokeh: finished with status 'done'
+remote:        Successfully installed Jinja2-2.10 MarkupSafe-1.0 PyYAML-3.12 bokeh-0.12.13 numpy-1.14.2 python-dateutil-2.7.2 six-1.11.0 tornado-5.0.2
+remote: 
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 63M
+remote: -----> Launching...
+remote:        Released v11
+remote:        https://django-rest-api-comp-vision.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/django-rest-api-comp-vision.git
+   f03b47f..909f927  master -> master
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku open
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku logs -t
+2018-04-14T12:22:13.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T12:22:13.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T13:00:19.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T13:00:19.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T13:01:31.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T13:01:31.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T15:26:23.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.243582+00:00 app[api]: Deploy f03b47f2 by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.243582+00:00 app[api]: Release v10 created by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.530080+00:00 heroku[web.1]: State changed from down to starting
+2018-04-14T15:26:23.000000+00:00 app[api]: Build succeeded
+2018-04-14T15:26:38.450119+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:26:39.986243+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T15:26:40.066936+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:26:40.069449+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T15:26:40.054267+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:26:42.866767+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:26:45.356655+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:26:45.347749+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:26:45.284728+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T15:26:56.812285+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=fed94d7d-65a8-4c1c-a387-97b773251246 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:26:58.840270+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=376d8d7d-24bf-4ef7-8ab0-c0d3e83319c0 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:27:13.761442+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/admin/" host=django-rest-api-comp-vision.herokuapp.com request_id=b29feb82-3d98-47c8-8c56-f88ed0afa10f fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:27:14.422058+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=699f09cb-14e1-42b5-b4bf-d4c98ceaad58 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:39:27.919136+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=17dc2981-c309-4b71-8a4c-568d520e372a fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:39:28.969879+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=e9ced7a9-8a95-4963-aa64-9c8869a5b55b fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:43:22.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T15:43:22.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T15:59:22.172152+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T15:59:25.208858+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:59:27.771318+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:59:27.784450+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:59:27.689870+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T16:43:56.365960+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T16:43:58.605526+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T16:44:00.224785+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T16:44:00.182480+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T16:44:00.381334+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T18:09:48.317326+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T18:09:50.384027+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T18:09:52.217667+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T18:09:52.137167+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T18:09:52.186831+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T21:22:19.360033+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T21:22:22.552496+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T21:22:22.568797+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T21:22:22.480085+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T02:49:38.586670+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T02:49:41.478014+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T02:49:43.782669+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T02:49:43.801225+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T02:49:43.734042+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:26:58.494063+00:00 app[api]: Starting process with command `set -e
+2018-04-15T06:26:58.494063+00:00 app[api]: mkdir -p tmp/repo_tmp/unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: cd tmp/repo_tmp
+2018-04-15T06:26:58.494063+00:00 app[api]: curl -o repo-cache.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=2IN3e87NgoDAssQSrIMy98twssU%3D&Expires=1523777163'
+2018-04-15T06:26:58.494063+00:00 app[api]: cd unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: tar -zxf ../repo-cache.tgz
+2018-04-15T06:26:58.494063+00:00 app[api]: METADATA="vendor/heroku"
+2018-04-15T06:26:58.494063+00:00 app[api]:   TMPDIR=`mktemp -d`
+2018-04-15T06:26:58.494063+00:00 app[api]:   cp -rf $METADATA $TMPDIR
+2018-04-15T06:26:58.494063+00:00 app[api]: if [ -d "$METADATA" ]; then
+2018-04-15T06:26:58.494063+00:00 app[api]: fi
+2018-04-15T06:26:58.494063+00:00 app[api]: cd ..
+2018-04-15T06:26:58.494063+00:00 app[api]: mkdir unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: rm -rf unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: cd unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: TMPDATA="$TMPDIR/heroku"
+2018-04-15T06:26:58.494063+00:00 app[api]: VENDOR="vendor"
+2018-04-15T06:26:58.494063+00:00 app[api]: if [ -d "$TMPDATA" ]; then
+2018-04-15T06:26:58.494063+00:00 app[api]:   mkdir $VENDOR
+2018-04-15T06:26:58.494063+00:00 app[api]:   cp -rf $TMPDATA $VENDOR
+2018-04-15T06:26:58.494063+00:00 app[api]:   rm -rf $TMPDIR
+2018-04-15T06:26:58.494063+00:00 app[api]: fi
+2018-04-15T06:26:58.494063+00:00 app[api]: tar -zcf ../cache-repack.tgz .
+2018-04-15T06:26:58.494063+00:00 app[api]: curl -o /dev/null --upload-file ../cache-repack.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=IGy6dvr4VdbNTaiOa4toIvfLdMw%3D&Expires=1523777217'
+2018-04-15T06:26:58.494063+00:00 app[api]: exit` by user dhankar.rohit@gmail.com
+2018-04-15T06:27:01.117989+00:00 heroku[run.9595]: Awaiting client
+2018-04-15T06:27:01.157690+00:00 heroku[run.9595]: Starting process with command `set -e mkdir -p tmp/repo_tmp/unpack cd tmp/repo_tmp curl -o repo-cache.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=2IN3e87NgoDAssQSrIMy98twssU%3D&Expires=1523777163' cd unpack tar -zxf ../repo-cache.tgz METADATA="vendor/heroku" if [ -d "$METADATA" ]; then   TMPDIR=`mktemp -d`   cp -rf $METADATA $TMPDIR fi cd .. rm -rf unpack mkdir unpack cd unpack TMPDATA="$TMPDIR/heroku" VENDOR="vendor" if [ -d "$TMPDATA" ]; then   mkdir $VENDOR   cp -rf $TMPDATA $VENDOR   rm -rf $TMPDIR fi tar -zcf ../cache-repack.tgz . curl -o /dev/null --upload-file ../cache-repack.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=IGy6dvr4VdbNTaiOa4toIvfLdMw%3D&Expires=1523777217' exit`
+2018-04-15T06:27:01.515641+00:00 heroku[run.9595]: State changed from starting to up
+2018-04-15T06:27:13.508672+00:00 heroku[run.9595]: Process exited with status 0
+2018-04-15T06:27:13.608074+00:00 heroku[run.9595]: State changed from up to complete
+2018-04-15T06:31:36.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-15T06:32:12.975923+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T06:32:12.353989+00:00 app[api]: Release v11 created by user dhankar.rohit@gmail.com
+2018-04-15T06:32:12.353989+00:00 app[api]: Deploy 909f9275 by user dhankar.rohit@gmail.com
+2018-04-15T06:31:36.000000+00:00 app[api]: Build succeeded
+2018-04-15T06:32:20.302612+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T06:32:22.444222+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T06:32:22.460945+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T06:32:22.463559+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T06:32:22.384201+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:32:26.691499+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T06:32:28.552255+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T06:32:28.537907+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T06:32:28.482685+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:32:56.076536+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=c4c2b49b-8dbf-4125-8ae4-54852c786c8f fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T06:32:57.447945+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=c533ba6c-7c0d-4d3b-9ecc-773ced6daa58 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+^C(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "cv2_1"
+[master 2e91dd8] cv2_1
+ 1 file changed, 33 insertions(+)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 596 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
+fatal: The remote end hung up unexpectedly
+fatal: The remote end hung up unexpectedly
+Everything up-to-date
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 596 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing pip
+remote: Traceback (most recent call last):
+remote:   File "/app/tmp/buildpacks/779a8bbfbbe7e1b715476c0b23fc63a2103b3e4131eda558669aba8fb5e6e05682419376144189b29beb5dee6d7626b4d3385edb0954bffea6c67d8cf622fd51/vendor/pip-pop/pip-diff", line 15, in <module>
+remote:     from pip.req import parse_requirements
+remote: ModuleNotFoundError: No module named 'pip.req'
+remote: mount: failure.bad-requirements: No such file or directory
+remote: -----> Installing requirements with pip
+remote:        Collecting certifi==2017.11.5 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 2))
+remote:          Downloading certifi-2017.11.5-py2.py3-none-any.whl (330kB)
+remote:        Collecting chardet==3.0.4 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 3))
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 4))
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl
+remote:        Collecting dj-static==0.0.6 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 5))
+remote:          Downloading dj-static-0.0.6.tar.gz
+remote:        Collecting Django==1.11 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 6))
+remote:          Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)
+remote:        Collecting django-crispy-forms==1.7.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 7))
+remote:          Downloading django_crispy_forms-1.7.0-py2.py3-none-any.whl (104kB)
+remote:        Collecting django-toolbelt==0.0.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 8))
+remote:          Downloading django-toolbelt-0.0.1.tar.gz
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 9))
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)
+remote:        Collecting gunicorn==19.7.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 10))
+remote:          Downloading gunicorn-19.7.1-py2.py3-none-any.whl (111kB)
+remote:        Collecting idna==2.6 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 11))
+remote:          Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+remote:        Collecting lml==0.0.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 13))
+remote:          Downloading lml-0.0.1-py2.py3-none-any.whl
+remote:        Collecting numpy==1.13.3 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 15))
+remote:          Downloading numpy-1.13.3-cp36-cp36m-manylinux1_x86_64.whl (17.0MB)
+remote:        Collecting pandas==0.21.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 16))
+remote:          Downloading pandas-0.21.0-cp36-cp36m-manylinux1_x86_64.whl (26.2MB)
+remote:        Collecting Pillow==4.3.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 17))
+remote:          Downloading Pillow-4.3.0-cp36-cp36m-manylinux1_x86_64.whl (5.8MB)
+remote:        Collecting psycopg2==2.7.3.2 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 18))
+remote:          Downloading psycopg2-2.7.3.2-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+remote:        Collecting pyexcel==0.5.6 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 19))
+remote:          Downloading pyexcel-0.5.6-py2.py3-none-any.whl (122kB)
+remote:        Collecting pyexcel-io==0.5.4 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 20))
+remote:          Downloading pyexcel_io-0.5.4-py2.py3-none-any.whl (41kB)
+remote:        Collecting pyexcel-webio==0.1.4 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 21))
+remote:          Downloading pyexcel_webio-0.1.4-py2.py3-none-any.whl
+remote:        Collecting pyexcel-xls==0.5.4 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 22))
+remote:          Downloading pyexcel_xls-0.5.4-py2.py3-none-any.whl
+remote:        Collecting python-dateutil==2.6.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 23))
+remote:          Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+remote:        Collecting pytz==2017.3 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 24))
+remote:          Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
+remote:        Collecting requests==2.18.4 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 26))
+remote:          Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+remote:        Collecting static3==0.7.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 28))
+remote:          Downloading static3-0.7.0.tar.gz
+remote:        Collecting texttable==1.1.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 29))
+remote:          Downloading texttable-1.1.1.tar.gz
+remote:        Collecting tornado==4.5.2 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 30))
+remote:          Downloading tornado-4.5.2.tar.gz (483kB)
+remote:        Collecting urllib3==1.22 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 31))
+remote:          Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+remote:        Collecting whitenoise==3.3.1 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 32))
+remote:          Downloading whitenoise-3.3.1-py2.py3-none-any.whl
+remote:        Collecting xlrd==1.1.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 33))
+remote:          Downloading xlrd-1.1.0-py2.py3-none-any.whl (108kB)
+remote:        Collecting xlwt==1.3.0 (from -r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 34))
+remote:          Downloading xlwt-1.3.0-py2.py3-none-any.whl (99kB)
+remote:        Collecting olefile (from Pillow==4.3.0->-r /tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/requirements.txt (line 17))
+remote:          Downloading olefile-0.45.1.zip (112kB)
+remote:        Installing collected packages: certifi, chardet, dj-database-url, static3, dj-static, pytz, Django, django-crispy-forms, psycopg2, gunicorn, django-toolbelt, djangorestframework, idna, lml, numpy, python-dateutil, pandas, olefile, Pillow, pyexcel-io, texttable, pyexcel, pyexcel-webio, xlwt, xlrd, pyexcel-xls, urllib3, requests, tornado, whitenoise
+remote:          Running setup.py install for static3: started
+remote:            Running setup.py install for static3: finished with status 'done'
+remote:          Running setup.py install for dj-static: started
+remote:            Running setup.py install for dj-static: finished with status 'done'
+remote:          Running setup.py install for django-toolbelt: started
+remote:            Running setup.py install for django-toolbelt: finished with status 'done'
+remote:          Found existing installation: numpy 1.14.2
+remote:            Uninstalling numpy-1.14.2:
+remote:              Successfully uninstalled numpy-1.14.2
+remote:          Found existing installation: python-dateutil 2.7.2
+remote:            Uninstalling python-dateutil-2.7.2:
+remote:              Successfully uninstalled python-dateutil-2.7.2
+remote:          Running setup.py install for olefile: started
+remote:            Running setup.py install for olefile: finished with status 'done'
+remote:          Running setup.py install for texttable: started
+remote:            Running setup.py install for texttable: finished with status 'done'
+remote:          Found existing installation: tornado 5.0.2
+remote:            Uninstalling tornado-5.0.2:
+remote:              Successfully uninstalled tornado-5.0.2
+remote:          Running setup.py install for tornado: started
+remote:            Running setup.py install for tornado: finished with status 'done'
+remote:        Successfully installed Django-1.11 Pillow-4.3.0 certifi-2017.11.5 chardet-3.0.4 dj-database-url-0.4.2 dj-static-0.0.6 django-crispy-forms-1.7.0 django-toolbelt-0.0.1 djangorestframework-3.7.3 gunicorn-19.7.1 idna-2.6 lml-0.0.1 numpy-1.13.3 olefile-0.45.1 pandas-0.21.0 psycopg2-2.7.3.2 pyexcel-0.5.6 pyexcel-io-0.5.4 pyexcel-webio-0.1.4 pyexcel-xls-0.5.4 python-dateutil-2.6.1 pytz-2017.3 requests-2.18.4 static3-0.7.0 texttable-1.1.1 tornado-4.5.2 urllib3-1.22 whitenoise-3.3.1 xlrd-1.1.0 xlwt-1.3.0
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        Traceback (most recent call last):
+remote:          File "manage.py", line 22, in <module>
+remote:            execute_from_command_line(sys.argv)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 363, in execute_from_command_line
+remote:            utility.execute()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 337, in execute
+remote:            django.setup()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+remote:            apps.populate(settings.INSTALLED_APPS)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+remote:            app_config.import_models()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+remote:            self.models_module = import_module(models_module_name)
+remote:          File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+remote:            return _bootstrap._gcd_import(name[level:], package, level)
+remote:          File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+remote:          File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+remote:          File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+remote:          File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+remote:          File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+remote:          File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+remote:          File "/tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/indexapp/models.py", line 9, in <module>
+remote:            from .image_processing import *
+remote:          File "/tmp/build_9b5b6ee2ee4d7ab98a123de53b56c34b/indexapp/image_processing.py", line 7, in <module>
+remote:            import cv2
+remote:        ModuleNotFoundError: No module named 'cv2'
+remote: 
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote: 
+remote:        You may need to update application code to resolve this error.
+remote:        Or, you can disable collectstatic for this application:
+remote: 
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote: 
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku logs -t
+2018-04-14T13:00:19.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T13:00:19.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T13:01:31.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T13:01:31.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T15:26:23.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.243582+00:00 app[api]: Deploy f03b47f2 by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.243582+00:00 app[api]: Release v10 created by user dhankar.rohit@gmail.com
+2018-04-14T15:26:36.530080+00:00 heroku[web.1]: State changed from down to starting
+2018-04-14T15:26:23.000000+00:00 app[api]: Build succeeded
+2018-04-14T15:26:38.450119+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:26:39.986243+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T15:26:40.066936+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:26:40.069449+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T15:26:40.054267+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:26:42.866767+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:26:45.356655+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:26:45.347749+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:26:45.284728+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T15:26:56.812285+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=fed94d7d-65a8-4c1c-a387-97b773251246 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:26:58.840270+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=376d8d7d-24bf-4ef7-8ab0-c0d3e83319c0 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:27:13.761442+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/admin/" host=django-rest-api-comp-vision.herokuapp.com request_id=b29feb82-3d98-47c8-8c56-f88ed0afa10f fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:27:14.422058+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=699f09cb-14e1-42b5-b4bf-d4c98ceaad58 fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:39:27.919136+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=17dc2981-c309-4b71-8a4c-568d520e372a fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:39:28.969879+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=e9ced7a9-8a95-4963-aa64-9c8869a5b55b fwd="182.69.128.81" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-14T15:43:22.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-14T15:43:22.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-14T15:59:22.172152+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T15:59:25.208858+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T15:59:27.771318+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T15:59:27.784450+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T15:59:27.689870+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T16:43:56.365960+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T16:43:58.605526+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T16:44:00.224785+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T16:44:00.182480+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T16:44:00.381334+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T18:09:48.317326+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-14T18:09:50.384027+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T18:09:52.217667+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T18:09:52.137167+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-14T18:09:52.186831+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T21:22:19.360033+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-14T21:22:22.552496+00:00 heroku[web.1]: Process exited with status 127
+2018-04-14T21:22:22.568797+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-14T21:22:22.480085+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T02:49:38.586670+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T02:49:41.478014+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T02:49:43.782669+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T02:49:43.801225+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T02:49:43.734042+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:26:58.494063+00:00 app[api]: Starting process with command `set -e
+2018-04-15T06:26:58.494063+00:00 app[api]: mkdir -p tmp/repo_tmp/unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: cd tmp/repo_tmp
+2018-04-15T06:26:58.494063+00:00 app[api]: curl -o repo-cache.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=2IN3e87NgoDAssQSrIMy98twssU%3D&Expires=1523777163'
+2018-04-15T06:26:58.494063+00:00 app[api]: cd unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: tar -zxf ../repo-cache.tgz
+2018-04-15T06:26:58.494063+00:00 app[api]: METADATA="vendor/heroku"
+2018-04-15T06:26:58.494063+00:00 app[api]:   TMPDIR=`mktemp -d`
+2018-04-15T06:26:58.494063+00:00 app[api]:   cp -rf $METADATA $TMPDIR
+2018-04-15T06:26:58.494063+00:00 app[api]: if [ -d "$METADATA" ]; then
+2018-04-15T06:26:58.494063+00:00 app[api]: fi
+2018-04-15T06:26:58.494063+00:00 app[api]: cd ..
+2018-04-15T06:26:58.494063+00:00 app[api]: mkdir unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: rm -rf unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: cd unpack
+2018-04-15T06:26:58.494063+00:00 app[api]: TMPDATA="$TMPDIR/heroku"
+2018-04-15T06:26:58.494063+00:00 app[api]: VENDOR="vendor"
+2018-04-15T06:26:58.494063+00:00 app[api]: if [ -d "$TMPDATA" ]; then
+2018-04-15T06:26:58.494063+00:00 app[api]:   mkdir $VENDOR
+2018-04-15T06:26:58.494063+00:00 app[api]:   cp -rf $TMPDATA $VENDOR
+2018-04-15T06:26:58.494063+00:00 app[api]:   rm -rf $TMPDIR
+2018-04-15T06:26:58.494063+00:00 app[api]: fi
+2018-04-15T06:26:58.494063+00:00 app[api]: tar -zcf ../cache-repack.tgz .
+2018-04-15T06:26:58.494063+00:00 app[api]: curl -o /dev/null --upload-file ../cache-repack.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=IGy6dvr4VdbNTaiOa4toIvfLdMw%3D&Expires=1523777217'
+2018-04-15T06:26:58.494063+00:00 app[api]: exit` by user dhankar.rohit@gmail.com
+2018-04-15T06:27:01.117989+00:00 heroku[run.9595]: Awaiting client
+2018-04-15T06:27:01.157690+00:00 heroku[run.9595]: Starting process with command `set -e mkdir -p tmp/repo_tmp/unpack cd tmp/repo_tmp curl -o repo-cache.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=2IN3e87NgoDAssQSrIMy98twssU%3D&Expires=1523777163' cd unpack tar -zxf ../repo-cache.tgz METADATA="vendor/heroku" if [ -d "$METADATA" ]; then   TMPDIR=`mktemp -d`   cp -rf $METADATA $TMPDIR fi cd .. rm -rf unpack mkdir unpack cd unpack TMPDATA="$TMPDIR/heroku" VENDOR="vendor" if [ -d "$TMPDATA" ]; then   mkdir $VENDOR   cp -rf $TMPDATA $VENDOR   rm -rf $TMPDIR fi tar -zcf ../cache-repack.tgz . curl -o /dev/null --upload-file ../cache-repack.tgz 'https://s3-external-1.amazonaws.com/heroku_repos/heroku.com/cache/93432081.tgz?AWSAccessKeyId=AKIAJQEIEH544PNXTZNQ&Signature=IGy6dvr4VdbNTaiOa4toIvfLdMw%3D&Expires=1523777217' exit`
+2018-04-15T06:27:01.515641+00:00 heroku[run.9595]: State changed from starting to up
+2018-04-15T06:27:13.508672+00:00 heroku[run.9595]: Process exited with status 0
+2018-04-15T06:27:13.608074+00:00 heroku[run.9595]: State changed from up to complete
+2018-04-15T06:31:36.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-15T06:32:12.975923+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T06:32:12.353989+00:00 app[api]: Release v11 created by user dhankar.rohit@gmail.com
+2018-04-15T06:32:12.353989+00:00 app[api]: Deploy 909f9275 by user dhankar.rohit@gmail.com
+2018-04-15T06:31:36.000000+00:00 app[api]: Build succeeded
+2018-04-15T06:32:20.302612+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T06:32:22.444222+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T06:32:22.460945+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T06:32:22.463559+00:00 heroku[web.1]: State changed from crashed to starting
+2018-04-15T06:32:22.384201+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:32:26.691499+00:00 heroku[web.1]: Starting process with command `gunicorn info2.wsgi --log-file -`
+2018-04-15T06:32:28.552255+00:00 heroku[web.1]: State changed from starting to crashed
+2018-04-15T06:32:28.537907+00:00 heroku[web.1]: Process exited with status 127
+2018-04-15T06:32:28.482685+00:00 app[web.1]: bash: gunicorn: command not found
+2018-04-15T06:32:56.076536+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=django-rest-api-comp-vision.herokuapp.com request_id=c4c2b49b-8dbf-4125-8ae4-54852c786c8f fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T06:32:57.447945+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=django-rest-api-comp-vision.herokuapp.com request_id=c533ba6c-7c0d-4d3b-9ecc-773ced6daa58 fwd="182.69.66.222" dyno= connect= service= status=503 bytes= protocol=https
+2018-04-15T06:36:56.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-15T06:36:56.000000+00:00 app[api]: Build failed -- check your build logs
+2018-04-15T06:38:48.000000+00:00 app[api]: Build started by user dhankar.rohit@gmail.com
+2018-04-15T06:38:48.000000+00:00 app[api]: Build failed -- check your build logs
+^C(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku config
+=== django-rest-api-comp-vision Config Vars
+DATABASE_URL: postgres://jjfyfssyagpapy:50b118a88b8f06f6be0b77a9f17088ef76e0d4d61406212053fde6da11d2616d@ec2-54-83-1-94.compute-1.amazonaws.com:5432/dc7olslvm7v18h
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+#
+
+
+heroku buildpacks:set heroku/python -a django-rest-api-comp-vision
+#
+#
+#
+
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku config
+=== django-rest-api-comp-vision Config Vars
+DATABASE_URL: postgres://jjfyfssyagpapy:50b118a88b8f06f6be0b77a9f17088ef76e0d4d61406212053fde6da11d2616d@ec2-54-83-1-94.compute-1.amazonaws.com:5432/dc7olslvm7v18h
+
+#
+# FART ---
+#gunicorn
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ heroku buildpacks:set heroku/python -a django-rest-api-comp-vision
+ ▸    The buildpack heroku/python is already set on your app.
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git add .
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git commit -am "cv2_3"
+[master 1f8b4b5] cv2_3
+ 1 file changed, 1 insertion(+)
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ git push heroku master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 835 bytes | 0 bytes/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote: -----> Installing pip
+remote: Traceback (most recent call last):
+remote:   File "/app/tmp/buildpacks/779a8bbfbbe7e1b715476c0b23fc63a2103b3e4131eda558669aba8fb5e6e05682419376144189b29beb5dee6d7626b4d3385edb0954bffea6c67d8cf622fd51/vendor/pip-pop/pip-diff", line 15, in <module>
+remote:     from pip.req import parse_requirements
+remote: ModuleNotFoundError: No module named 'pip.req'
+remote: mount: failure.bad-requirements: No such file or directory
+remote: -----> Installing requirements with pip
+remote:        Collecting certifi==2017.11.5 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 2))
+remote:          Downloading certifi-2017.11.5-py2.py3-none-any.whl (330kB)
+remote:        Collecting chardet==3.0.4 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 3))
+remote:          Downloading chardet-3.0.4-py2.py3-none-any.whl (133kB)
+remote:        Collecting dj-database-url==0.4.2 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 4))
+remote:          Downloading dj_database_url-0.4.2-py2.py3-none-any.whl
+remote:        Collecting dj-static==0.0.6 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 5))
+remote:          Downloading dj-static-0.0.6.tar.gz
+remote:        Collecting Django==1.11 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 6))
+remote:          Downloading Django-1.11-py2.py3-none-any.whl (6.9MB)
+remote:        Collecting django-crispy-forms==1.7.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 7))
+remote:          Downloading django_crispy_forms-1.7.0-py2.py3-none-any.whl (104kB)
+remote:        Collecting django-toolbelt==0.0.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 8))
+remote:          Downloading django-toolbelt-0.0.1.tar.gz
+remote:        Collecting djangorestframework==3.7.3 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 9))
+remote:          Downloading djangorestframework-3.7.3-py2.py3-none-any.whl (1.5MB)
+remote:        Collecting gunicorn==19.7.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 10))
+remote:          Downloading gunicorn-19.7.1-py2.py3-none-any.whl (111kB)
+remote:        Collecting idna==2.6 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 11))
+remote:          Downloading idna-2.6-py2.py3-none-any.whl (56kB)
+remote:        Collecting lml==0.0.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 13))
+remote:          Downloading lml-0.0.1-py2.py3-none-any.whl
+remote:        Collecting numpy==1.13.3 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 15))
+remote:          Downloading numpy-1.13.3-cp36-cp36m-manylinux1_x86_64.whl (17.0MB)
+remote:        Collecting pandas==0.21.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 16))
+remote:          Downloading pandas-0.21.0-cp36-cp36m-manylinux1_x86_64.whl (26.2MB)
+remote:        Collecting Pillow==4.3.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 17))
+remote:          Downloading Pillow-4.3.0-cp36-cp36m-manylinux1_x86_64.whl (5.8MB)
+remote:        Collecting psycopg2==2.7.3.2 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 18))
+remote:          Downloading psycopg2-2.7.3.2-cp36-cp36m-manylinux1_x86_64.whl (2.7MB)
+remote:        Collecting pyexcel==0.5.6 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 19))
+remote:          Downloading pyexcel-0.5.6-py2.py3-none-any.whl (122kB)
+remote:        Collecting pyexcel-io==0.5.4 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 20))
+remote:          Downloading pyexcel_io-0.5.4-py2.py3-none-any.whl (41kB)
+remote:        Collecting pyexcel-webio==0.1.4 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 21))
+remote:          Downloading pyexcel_webio-0.1.4-py2.py3-none-any.whl
+remote:        Collecting pyexcel-xls==0.5.4 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 22))
+remote:          Downloading pyexcel_xls-0.5.4-py2.py3-none-any.whl
+remote:        Collecting python-dateutil==2.6.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 23))
+remote:          Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+remote:        Collecting pytz==2017.3 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 24))
+remote:          Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
+remote:        Collecting requests==2.18.4 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 26))
+remote:          Downloading requests-2.18.4-py2.py3-none-any.whl (88kB)
+remote:        Collecting static3==0.7.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 28))
+remote:          Downloading static3-0.7.0.tar.gz
+remote:        Collecting texttable==1.1.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 29))
+remote:          Downloading texttable-1.1.1.tar.gz
+remote:        Collecting tornado==4.5.2 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 30))
+remote:          Downloading tornado-4.5.2.tar.gz (483kB)
+remote:        Collecting urllib3==1.22 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 31))
+remote:          Downloading urllib3-1.22-py2.py3-none-any.whl (132kB)
+remote:        Collecting whitenoise==3.3.1 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 32))
+remote:          Downloading whitenoise-3.3.1-py2.py3-none-any.whl
+remote:        Collecting xlrd==1.1.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 33))
+remote:          Downloading xlrd-1.1.0-py2.py3-none-any.whl (108kB)
+remote:        Collecting xlwt==1.3.0 (from -r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 34))
+remote:          Downloading xlwt-1.3.0-py2.py3-none-any.whl (99kB)
+remote:        Collecting olefile (from Pillow==4.3.0->-r /tmp/build_24c58bc2fff549d68de91f92f6505862/requirements.txt (line 17))
+remote:          Downloading olefile-0.45.1.zip (112kB)
+remote:        Installing collected packages: certifi, chardet, dj-database-url, static3, dj-static, pytz, Django, django-crispy-forms, psycopg2, gunicorn, django-toolbelt, djangorestframework, idna, lml, numpy, python-dateutil, pandas, olefile, Pillow, pyexcel-io, texttable, pyexcel, pyexcel-webio, xlwt, xlrd, pyexcel-xls, urllib3, requests, tornado, whitenoise
+remote:          Running setup.py install for static3: started
+remote:            Running setup.py install for static3: finished with status 'done'
+remote:          Running setup.py install for dj-static: started
+remote:            Running setup.py install for dj-static: finished with status 'done'
+remote:          Running setup.py install for django-toolbelt: started
+remote:            Running setup.py install for django-toolbelt: finished with status 'done'
+remote:          Found existing installation: numpy 1.14.2
+remote:            Uninstalling numpy-1.14.2:
+remote:              Successfully uninstalled numpy-1.14.2
+remote:          Found existing installation: python-dateutil 2.7.2
+remote:            Uninstalling python-dateutil-2.7.2:
+remote:              Successfully uninstalled python-dateutil-2.7.2
+remote:          Running setup.py install for olefile: started
+remote:            Running setup.py install for olefile: finished with status 'done'
+remote:          Running setup.py install for texttable: started
+remote:            Running setup.py install for texttable: finished with status 'done'
+remote:          Found existing installation: tornado 5.0.2
+remote:            Uninstalling tornado-5.0.2:
+remote:              Successfully uninstalled tornado-5.0.2
+remote:          Running setup.py install for tornado: started
+remote:            Running setup.py install for tornado: finished with status 'done'
+remote:        Successfully installed Django-1.11 Pillow-4.3.0 certifi-2017.11.5 chardet-3.0.4 dj-database-url-0.4.2 dj-static-0.0.6 django-crispy-forms-1.7.0 django-toolbelt-0.0.1 djangorestframework-3.7.3 gunicorn-19.7.1 idna-2.6 lml-0.0.1 numpy-1.13.3 olefile-0.45.1 pandas-0.21.0 psycopg2-2.7.3.2 pyexcel-0.5.6 pyexcel-io-0.5.4 pyexcel-webio-0.1.4 pyexcel-xls-0.5.4 python-dateutil-2.6.1 pytz-2017.3 requests-2.18.4 static3-0.7.0 texttable-1.1.1 tornado-4.5.2 urllib3-1.22 whitenoise-3.3.1 xlrd-1.1.0 xlwt-1.3.0
+remote: 
+remote: -----> $ python manage.py collectstatic --noinput
+remote:        Traceback (most recent call last):
+remote:          File "manage.py", line 22, in <module>
+remote:            execute_from_command_line(sys.argv)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 363, in execute_from_command_line
+remote:            utility.execute()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/core/management/__init__.py", line 337, in execute
+remote:            django.setup()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/__init__.py", line 27, in setup
+remote:            apps.populate(settings.INSTALLED_APPS)
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/registry.py", line 108, in populate
+remote:            app_config.import_models()
+remote:          File "/app/.heroku/python/lib/python3.6/site-packages/django/apps/config.py", line 202, in import_models
+remote:            self.models_module = import_module(models_module_name)
+remote:          File "/app/.heroku/python/lib/python3.6/importlib/__init__.py", line 126, in import_module
+remote:            return _bootstrap._gcd_import(name[level:], package, level)
+remote:          File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+remote:          File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+remote:          File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+remote:          File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+remote:          File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+remote:          File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+remote:          File "/tmp/build_24c58bc2fff549d68de91f92f6505862/indexapp/models.py", line 9, in <module>
+remote:            from .image_processing import *
+remote:          File "/tmp/build_24c58bc2fff549d68de91f92f6505862/indexapp/image_processing.py", line 7, in <module>
+remote:            import cv2
+remote:        ModuleNotFoundError: No module named 'cv2'
+remote: 
+remote:  !     Error while running '$ python manage.py collectstatic --noinput'.
+remote:        See traceback above for details.
+remote: 
+remote:        You may need to update application code to resolve this error.
+remote:        Or, you can disable collectstatic for this application:
+remote: 
+remote:           $ heroku config:set DISABLE_COLLECTSTATIC=1
+remote: 
+remote:        https://devcenter.heroku.com/articles/django-assets
+remote:  !     Push rejected, failed to compile Python app.
+remote: 
+remote:  !     Push failed
+remote: Verifying deploy...
+remote: 
+remote: !	Push rejected to django-rest-api-comp-vision.
+remote: 
+To https://git.heroku.com/django-rest-api-comp-vision.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'https://git.heroku.com/django-rest-api-comp-vision.git'
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+(opencv_venv) dhankar@dhankar-VPCEB44EN:/media/dhankar/Dhankar_1/a2_18/a2___DC_API/aa____infoBOT_v2$ 
+
+
